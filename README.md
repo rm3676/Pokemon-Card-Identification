@@ -45,17 +45,29 @@ Torchvision (image preprocessing & augmentation)
 
 # Project Structure
 backend/
+
 │── app/
+
 │   └── main.py              # FastAPI app entry point
+
 │── data/
+
 │   └── pokemon-manifest.csv # Manifest linking images + metadata
+
 │── model/
+
 │   └── pokemon_card_model.pth # Trained model weights
+
 │── label/
+
 │   └── idx2id.json          # Mapping file for predictions
+
 │── notebook/
+
 │   └── core-backend-notebook.ipynb # Training & exploration
+
 │── requirements.txt
+
 │── README.md
 
 # Credits / Data Sources
