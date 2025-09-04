@@ -3,28 +3,44 @@ Pokémon Card Identification App  A deep learning–powered application that ide
 
 # Features
 Image Upload & Identification: Upload a Pokémon card image, and the app predicts the exact card.
+
 High Accuracy Model: Achieved 93.62% training accuracy using ResNet-18.
+
 Data Integration: Combines card images with metadata (set, rarity, artist, HP, etc.) for complete results.
+
 FastAPI Backend: Provides an API endpoint (/identify_card) to process images and return predictions in JSON.
+
 Interactive Docs: Swagger and ReDoc available for testing API calls.
 
 # How It Works
 
 1.Data Preparation: Collected card images and metadata (Kaggle datasets). Cleaned by removing duplicates and corrupt files.
+
 2.Dataset Standardization: Converted all images to RGB, resized to 224×224 pixels, and stored as JPEG.
+
 3.Data Integration: Built a manifest linking images to card IDs and merged with TCG metadata. Created numeric labels (id2idx, idx2id).
+
 4.Model Training:
+
 Fine-tuned a pretrained ResNet-18.
+
 Replaced final layer with number of unique cards.
+
 Applied strong augmentation (flips, rotations, color jitter).
+
 Trained for 10 epochs → reached 93.62% accuracy.
+
 5.Prediction & Inference: User uploads a card → model predicts ID → details (set, rarity, type, etc.) are retrieved and displayed.
 
 # Tech Stack
 Python 3.10+
+
 PyTorch (ResNet model training)
+
 FastAPI (backend API)
+
 Pandas / NumPy (data handling)
+
 Torchvision (image preprocessing & augmentation)
 
 # Project Structure
